@@ -21,5 +21,8 @@
 .TodoSearch:focus{
   outline: thick double #61dafa;
 }
+.TodoSearch:disabled {
+  opacity: 25%;
+}
 
 
