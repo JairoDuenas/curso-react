@@ -14,23 +14,26 @@ import { EmptyTodos } from '../EmptyTodos';
 import { ChangeAlert } from '../ChangeAlert';
 
 function App() {
+  const { states, stateUpdaters } = useTodos();
 
   const {
     error,
     loading,
     searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
     totalTodos, 
+    completeTodo,
     completedTodos,
+    openModal,
     searchValue, 
-    setSearchValue,
-    addTodo,
-    sincronizeTodos,
+  } = states;
 
-} = useTodos();
+  const {
+    setOpenModal,
+    addTodo,
+    deleteTodo,
+    setSearchValue,
+    sincronizeTodos,
+  } = stateUpdaters;
 
 return (
   <React.Fragment>
